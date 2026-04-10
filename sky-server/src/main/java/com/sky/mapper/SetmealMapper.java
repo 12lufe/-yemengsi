@@ -79,4 +79,11 @@ public interface SetmealMapper {
     @AutoFill(OperationType.UPDATE)
     void update(Setmeal setmeal);
 
+    /**
+     * 根据id查询套餐
+     * @param setmealId
+     * @return
+     */
+    @Select("select * from setmeal where id = #{id}")
+    Setmeal getBγId(Long setmealId);
 }
